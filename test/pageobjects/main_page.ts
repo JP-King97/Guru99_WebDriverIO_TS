@@ -8,7 +8,7 @@ class MainPage {
     }
 
     getToGuru99Page(): void {
-        browser.url(this.url)
+        browser.url(this.url);
     }
 
 }
