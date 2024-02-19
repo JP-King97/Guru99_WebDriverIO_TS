@@ -13,16 +13,22 @@ class MainPage extends Page {
         super.open(url);
     }
 
-    get Url(): Promise<string> {
+    get url(): Promise<string> {
         return super.url;
     }
 
-    get Title(): Promise<string> {
+    get title(): Promise<string> {
         return super.title;
     }
 
     typeUserName(userName: string): void {
         $(this.userNameBox).setValue(userName);
+    }
+
+    getUserNameValue(): Promise<string> {
+        //$(this.userNameBox).waitUntil($(this.userNameBox).getValue() !== "")
+        const userName = $(this.userNameBox).getValue();
+        return userName;
     }
 
     typePassword(password: string): void {
