@@ -35,9 +35,12 @@ class MainPage extends Page {
         $(this.passwordBox).setValue(password);
     }
 
-    clickSubmitButton() {
-        $(this.submitButton).click();
+    clickSubmitButton(): void {
+        this.performClick(this.submitButton);
+    }
 
+    clickRegistrationButton(): void {
+        this.performClick(this.registrationButton);
     }
 
 }
