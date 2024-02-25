@@ -8,6 +8,8 @@ class MainPage extends Page {
     private passwordBox: string = 'input[name="password"]';
     private submitButton: string = 'input[name="submit"]';
     private signOnSectionButton: string = '[href="login.php"]';
+    private flightsSectionButton: string = '[href="reservation.php"]';
+
     //private image = 'img[alt="Mercury Tours"';
 
     async open() {
@@ -67,6 +69,13 @@ class MainPage extends Page {
      */
     clickSignOnSectionButton(): void {
         this.performClick(this.signOnSectionButton);
+    }
+
+    /**
+     * Perform a click on the 'Flights' section button
+     */
+    clickFlightsSectionButton(): void {
+        this.performClick(this.flightsSectionButton);
     }
 
 }

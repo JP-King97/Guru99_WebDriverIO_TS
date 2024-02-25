@@ -1,0 +1,13 @@
+name: workflow
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tests_execution:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: display info
+        run: echo "Hello J31415"
