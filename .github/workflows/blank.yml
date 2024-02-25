@@ -25,9 +25,9 @@ jobs:
         with:
           node-version: 18
       - name: Install
-        run: npm install
+        run: npm i @wdio/lastest
       - name: Test
-        run: npm run test:local
+        run: npm run wdio
       - uses: actions/upload-artifact@v1
         if: failure()
         with:
