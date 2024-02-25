@@ -1,17 +1,28 @@
-import Page from "./page";
+import Page from "./page.ts";
 
 class LoginPage extends Page {
 
     private usernameInput: string = '[name="userName"]';
     private passwordInput: string = '[name="password"]';
     private submitButton: string = '[name="submit"]';
+    private incorrectCredentialsMessage: string = 'td>span'
 
     constructor() {
         super()
     }
 
     async open(url: string) {
-        super.open(url);
+        await super.open(url);
+    }
+
+    get url(): Promise<string> {
+        const url = browser.getUrl();
+        return url;
+    }
+
+    get title(): Promise<string> {
+        const title = browser.getTitle();
+        return title;
     }
 
     /**

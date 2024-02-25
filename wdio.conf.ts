@@ -30,8 +30,8 @@ export const config: Options.Testrunner = {
     // of the config file unless it's absolute.
     //
     specs: [
-        //'./test/specs/**/main_page_test.ts',
-        //'./test/specs/**/registration_test.ts',
+        './test/specs/**/home_page_test.ts',
+        './test/specs/**/registration_test.ts',
         './test/specs/**/login_test.ts'
     ],
     // Patterns to exclude.

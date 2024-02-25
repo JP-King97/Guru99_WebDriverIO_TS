@@ -1,16 +1,16 @@
 //import { browser } from "@wdio/globals"
-import MainPage from "../pageobjects/main_page.ts";
+import HomePage from "../pageobjects/home_page.ts";
 
 describe('The Main Page', () => {
     it('should have the right website title', async () => {
-        MainPage.open('https://demo.guru99.com/test/newtours/');
+        HomePage.open();
         (await $('body')).waitForExist();
-        const title = await MainPage.title;
+        const title = await HomePage.title;
         await expect(title).toStrictEqual('Welcome: Mercury Tours')
     })
 
     it('should have the right Website url', async () => {
-        const url = await MainPage.url;
+        const url = await HomePage.url;
         await expect(url).toEqual('https://demo.guru99.com/test/newtours/')
     })
 })

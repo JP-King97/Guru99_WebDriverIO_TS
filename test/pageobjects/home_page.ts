@@ -4,13 +4,14 @@ import Page from './page.ts';
 
 class MainPage extends Page {
 
-    private userNameBox = 'input[name="userName"]';
-    private passwordBox = 'input[name="password"]';
-    private submitButton = 'input[name="submit"]';
+    private userNameBox: string = 'input[name="userName"]';
+    private passwordBox: string = 'input[name="password"]';
+    private submitButton: string = 'input[name="submit"]';
+    private signOnSectionButton: string = '[href="login.php"]';
     //private image = 'img[alt="Mercury Tours"';
 
-    async open(url: string) {
-        super.open(url);
+    async open() {
+        await super.open('https://demo.guru99.com/test/newtours/');
     }
 
     get url(): Promise<string> {
@@ -55,10 +56,17 @@ class MainPage extends Page {
     }
 
     /**
-     * Perform a click on the 'register' button
+     * Perform a click on the 'register' section button
      */
     clickRegistrationButton(): void {
         this.performClick(this.registrationButton);
+    }
+
+    /**
+     * Perform a click on the 'sign-on' section button
+     */
+    clickSignOnSectionButton(): void {
+        this.performClick(this.signOnSectionButton);
     }
 
 }
