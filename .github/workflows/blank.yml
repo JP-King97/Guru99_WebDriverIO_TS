@@ -24,6 +24,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: initialization
+        run: npm init
       - name: Install
         run: npm i @wdio/lastest
       - name: Test
