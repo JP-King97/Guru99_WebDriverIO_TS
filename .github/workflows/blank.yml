@@ -26,10 +26,10 @@ jobs:
           node-version: 18
       - name: Install
         run: npm install
-      - name: initialization
-        run: npm init
-      - name: setting up
-        run: npm i @wdio/lastest
+     ## - name: initialization
+     ##   run: npm init
+     ## - name: setting up
+     ##   run: npm i @wdio/lastest
       - name: Test
         run: npm run wdio
       - uses: actions/upload-artifact@v1
