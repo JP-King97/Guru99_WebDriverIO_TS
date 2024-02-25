@@ -4,8 +4,8 @@ import MainPage from '../pageobjects/main_page.ts'
 
 describe('The login feature', () => {
     it('should work with valid credentials', async () => {
-        MainPage.open('https://demo.guru99.com/test/newtours/');
-        await browser.pause(4000);
+        await MainPage.open('https://demo.guru99.com/test/newtours/');
+        //await browser.pause(4000);
         //(await $('body')).waitForExist
         MainPage.typeUserName('Kingtero97');
         await MainPage.getUserNameValue();
@@ -17,8 +17,5 @@ describe('The login feature', () => {
         await browser.pause(4000)
 
         // console.log(MainPage.userNameBoxValue);
-
-
-
     })
 })

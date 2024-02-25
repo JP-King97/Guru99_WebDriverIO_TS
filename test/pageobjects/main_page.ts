@@ -21,24 +21,42 @@ class MainPage extends Page {
         return super.title;
     }
 
+    /**
+     * Introduce the username into the input box 
+     * @param userName username of a registered account
+     */
     typeUserName(userName: string): void {
         $(this.userNameBox).setValue(userName);
     }
 
+    /**
+     * 
+     * @returns 
+     */
     getUserNameValue(): Promise<string> {
         //$(this.userNameBox).waitUntil($(this.userNameBox).getValue() !== "")
         const userName = $(this.userNameBox).getValue();
         return userName;
     }
 
+    /**
+     * Indroduce the password into the input box
+     * @param password password of a registered account
+     */
     typePassword(password: string): void {
         $(this.passwordBox).setValue(password);
     }
 
+    /**
+     * Perform a click on the 'submit' button
+     */
     clickSubmitButton(): void {
         this.performClick(this.submitButton);
     }
 
+    /**
+     * Perform a click on the 'register' button
+     */
     clickRegistrationButton(): void {
         this.performClick(this.registrationButton);
     }
