@@ -1,3 +1,4 @@
+import { browser } from '@wdio/globals'
 /**
  * This is the parent class for all the pages in the directory of a website
  */

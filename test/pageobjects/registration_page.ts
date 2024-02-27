@@ -1,5 +1,6 @@
 import { browser } from '@wdio/globals'
 import Page from './page.ts';
+import { ChainablePromiseElement } from 'webdriverio'
 
 
 class RegistrationPage extends Page {
@@ -35,6 +36,10 @@ class RegistrationPage extends Page {
      */
     public async open(url: string) {
         super.open(url);
+    }
+
+    get a(): ChainablePromiseElement<WebdriverIO.Element> {
+        return $('[name="submit"]')
     }
 
     get url(): Promise<string> {

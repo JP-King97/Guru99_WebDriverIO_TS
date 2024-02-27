@@ -1,4 +1,4 @@
-//import { browser } from '@wdio/globals'
+import { browser } from '@wdio/globals'
 //import RegistrationPage from '../pageobjects/registration_page.ts'
 import Page from './page.ts';
 
@@ -11,6 +11,9 @@ class MainPage extends Page {
     private flightsSectionButton: string = '[href="reservation.php"]';
 
     //private image = 'img[alt="Mercury Tours"';
+    get servTable(): Promise<WebdriverIO.ElementArray> {
+        return $$('table[border="2"] a')
+    };
 
     async open() {
         await super.open('https://demo.guru99.com/test/newtours/');
@@ -23,6 +26,8 @@ class MainPage extends Page {
     get title(): Promise<string> {
         return super.title;
     }
+
+
 
     /**
      * Introduce the username into the input box 
