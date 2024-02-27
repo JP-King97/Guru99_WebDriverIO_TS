@@ -8,8 +8,6 @@ This repository contains automated tests for the Flight Reservation and Travel S
 - [Installation](#installation)
 - [Usage](#usage)
 - [Test Structure](#test-structure)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 These test cases aims to automate the testing process for the Flight Reservation and Travel Services website to ensure its functionality, usability, and reliability. By leveraging WebDriverIO with Typescript, we can efficiently execute tests Chrome browser, due to the importance and revelance of this browser to the average consumer of this website.
